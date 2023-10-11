@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper</title>
+</head>
+<body style="background-color: #212121;">
+    <h1 style="text-align: center;color: white;">Color Flipper</h1>
+    <div class="border_box" style="align-items:center;justify-content:center; background-color:red; width: 100vh; margin-left: 400px; height: 50px; text-align: center;">
+        <p style="font-size: 40px; color:white;">Background-Color:
+        <span id="colour_name" style="color: white;">Red</span>
+        </p>
+        <button id="change_colour_button" style="width: 100px; cursor: pointer;">Click me to change the colour</button>
+    </div>
+</body>
+<script>
+    function changeColur(){
+        const letters = '0123456789ABCDEF'; // Hexadecimal digits
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    const selectBody = document.querySelector('body')
+    const selectButton = document.getElementById('change_colour_button')
+    const colourName = document.getElementById('colour_name')
+
+    selectButton.addEventListener('click',function(){
+        const randomColour = changeColur();
+        selectBody.style.backgroundColor = randomColour
+        colourName.innerText = randomColour
+    })
+
+
+</script>
+</html>
