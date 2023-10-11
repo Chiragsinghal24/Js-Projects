@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: pink;">
+    <h1 style="text-align: center; color: purple; font-size: 80px; ">Counter</h1>
+    <h1 id="counter_value" style="text-align: center; font-size: 130px;">3</h1>
+    <div class="buttons_container" style="justify-content: center; text-align: center;">
+        <button id="decrease" style="cursor: pointer;">Decrease</button>
+        <button id="reset" style="cursor: pointer;">Reset</button>
+        <button id="increase" style="cursor: pointer;">Increase</button>
+    </div>   
+</body>
+<script>
+    const increaseButton = document.getElementById('increase')
+    const decreaseButton = document.getElementById('decrease')
+    const resetButton = document.getElementById('reset')
+    const textValue=document.getElementById('counter_value')
+    var updated = Number(textValue.innerHTML)
+
+    function increaseCount(){
+        updated++;
+        return updated;
+    }
+    function decreaseCount(){
+        updated--;
+        return updated;
+    }
+    function resetCount(){
+        updated=0;
+        return updated;
+    }
+
+    increaseButton.addEventListener('click',function(){
+        updated = increaseCount()
+        textValue.innerHTML = updated
+    })
+
+    decreaseButton.addEventListener('click',function(){
+        updated = decreaseCount()
+        textValue.innerHTML = updated
+    })
+
+    resetButton.addEventListener('click',function(){
+        updated = resetCount()
+        textValue.innerHTML = updated
+    })
+</script>
+</html>
+
+
+<!-- another approach of doing this code -->
+<!-- <button id="counter">
+    <span id="counter_value">0</span>
+    <button data-action="increase">Increase</button>
+    <button data-action="decrease">Decrease</button>
+    <button data-action="reset">Reset</button>
+  </button>
+
+  
+  document.getElementById('counter').addEventListener('click', function (e) {
+    const textValue = document.getElementById('counter_value');
+    let updated = Number(textValue.textContent);
+  
+    if (e.target.dataset.action === 'increase') {
+      updated++;
+    } else if (e.target.dataset.action === 'decrease') {
+      updated--;
+    } else if (e.target.dataset.action === 'reset') {
+      updated = 0;
+    }
+  
+    textValue.textContent = updated;
+  }); -->
+  
