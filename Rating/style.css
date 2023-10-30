@@ -1,0 +1,156 @@
+@import url(https://fonts.googleapis.com/css?family=Kumbh+Sans:300,400,700|Roboto+Slab:300,400,700|Space+Mono:300,400,700);
+
+
+:root {
+    --colour_bg: hsl(0, 0%, 100%);
+    --Light_Grey: hsl(217, 12%, 63%);
+    --Medium_Grey: hsl(216, 12%, 54%);
+    --Dark_Blue: hsl(213, 19%, 18%);
+    --Very_Dark_Blue: hsl(216, 12%, 8%);
+    --Orange: hsl(25, 97%, 53%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    box-sizing: border-box;
+    margin-top: 25vh;
+    background-color: var(--Very_Dark_Blue);
+    font-family:'Poppins', sans-serif;
+}
+
+.card{
+    border-radius: 30px;
+    background-color: var(--Dark_Blue);
+    width: 50vh;
+    height: 55vh;
+    color: white;
+}
+
+.page1{
+    display: block;
+}
+
+
+.star_icon_logo{
+    background-color: rgba(245, 222, 179, 0.1);
+    height: 45px;
+    width: 45px;
+    margin: 5vh;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.image{
+    margin-top: 30%;
+    opacity: 0.5;
+}
+
+.content{
+    margin-left:4vh;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.paragraph{
+    margin-top:20px;
+    font-size: 12px;
+    opacity: 0.3;
+    line-height: 1.5;
+}
+
+.rating_number{
+    display: flex;
+    background-color: rgba(245, 222, 179, 0.1);
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+
+.rating_component{
+    margin-top: 3vh;
+    display: flex;
+}
+
+.submit_button{
+    background-color: var(--Orange);
+    padding: 13px;
+    letter-spacing: 2px;
+    width: 38vh;
+    font-weight: 400;
+    color: white;
+    font-family:'Poppins', sans-serif;
+    border-radius: 20px;
+    border-style: none;
+    border-color:var(--Orange);
+    margin: 2vh;
+    cursor: pointer;
+
+}
+
+.rating_component span{
+    align-items: center;
+    margin-left: 15px;
+}
+
+.rating_number:hover{
+    background-color:var(--Orange);
+    opacity: 1;
+}
+
+
+.submit_button:hover{
+    background-color: var(--colour_bg);
+    color: var(--Orange);
+}
+.thank_section{
+    display: none;
+    margin-top: 2vh;
+}
+
+.thank_image{
+    text-align: center;
+}
+
+.thank_text{
+    box-sizing: border-box;
+    color: var(--Orange);
+    background-color: var(--Very_Dark_Blue);
+    border-radius: 20px;
+    padding: 6px;
+    width: 190px;
+    margin-top: 3vh;
+    margin-left: 10vh;
+    opacity: 0.6;
+    font-weight: 500;
+    margin-bottom: 5vh;
+}
+
+.thanking{
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2vh;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.thank_content{
+    opacity: 0.4;
+    font-family: 'Poppins',sans-serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin:10px;
+    font-size: 15px;
+}
